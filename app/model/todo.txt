@@ -1,1 +1,1 @@
-TODO: place your config.json, pytorch_model.bin, and aitextgen.tokenizer(if applicable) files in this folder and delete this TODO. 
+https://huggingface.co/lizz27/DialoGPT-medium-BaymaxBot/tree/main
