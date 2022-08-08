@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="
+	width=device-width, initial-scale=1">
+	<title> Chat with Baymax </title>
+  <!-- Google fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+  
+  <style type="text/css">
+    #intro {
+      border-radius: 20px;
+      padding:20px;
+      background: red;
+      background: linear-gradient(90deg, rgba(207,55,211,1) 0%, rgba(232,0,0,1) 100%);
+      background: red;
+      width: 860px;
+      float: right;
+      margin-right: 40px;
+      margin-top: 40px;
+
+    }
+
+    #exit{
+      display:inline;
+    }
+
+    body {
+      font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+      background-color: black;
+      color: white;
+    }
+
+    #box{
+      width:800px;
+      height: 400px;
+      margin: 50px 40px 40px 40px;
+      border-radius: 25px 25px 25px 0px;
+      float:right;
+      background-color:#ebebeb;
+      color:black;
+      position: relative;
+     }
+     #box h2{
+       margin-left:10px;
+       margin-right:0px;
+      }
+
+     .submitbutton {
+      font-family: inherit;
+      color:red;
+      font-weight: 200;
+      letter-spacing: 1px;
+      outline: 0;
+      border: 1px solid red;
+      cursor: pointer;
+      background-color: rgba(0, 0, 0, 0);
+      transition-duration:0.2s;
+      right: 40px;
+      }
+
+      .submitbutton::after {
+        content: "";
+        background-color: white;
+        width: 70%;
+        z-index: -1;
+        position: absolute;
+        height: 100%;
+        transition: 0.2s;
+      }
+
+      .submitbutton:hover {
+        background-color:white;
+        color:black;
+        border:black;
+        height:auto;
+      }
+
+    #userInput {
+      background-color: lightgrey;
+      border-style: none;
+      color: black;
+      width: 570px;
+      left: 40px;
+      font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    }
+    #box div div h2{
+      display:inline-block;
+      color:white;
+      background-color: red;
+      border-radius: 20px;
+      border-style: none;
+      padding:15px;
+    }
+
+    .inputBox{
+      position: absolute;
+      bottom: 24px;
+      padding: 16px;
+      font-size: 16px;
+      border-radius: 20px;
+    }
+
+    img {
+      float: left;
+      width: 360px;
+      height: auto;
+      margin: 40px;
+    }
+    
+    #bbubble {
+      position: relative;
+      top: 100px;
+    }
+    
+    #ububble {
+      background-color: grey;
+    }
+  </style>
+</head>
+
+
+
+<body>
+
+  <div id=exit>
+     <h1 ></h1>
+  </div>
+
+  <div id="intro">
+    <h1><center>You are chatting with Baymax!</center></h1>
+    <h4><center>Feel free to ask him anything!</center></h4>
+  </div>
+
+  <img src="https://cdn.shoplightspeed.com/shops/615023/files/32394034/figpin-figpin-disney-big-hero-6-baymax-glitter-408.jpg"/>
+
+
+
+
+
+
+<div id="box">
+  <div style="margin:5px">
+    <div  style="display:block;top:3%;">
+      <h2 id="ububble" class="userdisplayinput" style="margin-right: 40px;float:right;">
+          {{ userInput }}
+      </h2>
+    </div>
+    <div id="bbubble" style="display:block;">
+      <h2 style="margin-left: 40px;transition duration:0.2s; width: fit-content">Baymax:     {{ generated }} </h2>
+    </div>
+  </div>
+   
+  <form action="{{url_for('generation')}}" method="POST">
+    <input type="text" id="userInput" name="input" class="inputBox" placeholder="Enter your input here">
+      <input type="Submit" class="submitbutton inputBox" onclick="displayusersmessage()">
+
+    <br>
+
+</form>
+     
+   
+  </div>
+
+  <div class="Baymax-1">
+  
+
+<center></center>
+  </div>
+
+<script>
+function displayusersmessage(data){
+  var data= document.getElementsByClassName('inputBox');
+  window.onload = displayusersmessage(data);
+
+}
+  document.getElementsByClassName('userdisplayinput').innerHTML = data;
+</script>
+  
+  
+
+</body>
+</html>
