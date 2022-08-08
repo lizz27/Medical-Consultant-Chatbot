@@ -1,3 +1,253 @@
-<h2>
-    The index works.
-</h2>
+<!DOCTYPE html>
+<html id="html" lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Baymax Home</title>
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/7572a78558.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="static/css/styles.css" rel="stylesheet" />
+      
+      <style>
+      </style>
+
+    </head>
+
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+            <div class="container px-4 px-lg-5">
+                <a class="navbar-brand" href="#page-top">Baymax AI</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#projects">Team</a></li>
+                        
+                        <li class="nav-item"><a class="nav-link" href="#signup">More</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center" style="background-image: url({{ url_for('static', filename="img/ea.jpg") }});background-size: cover;" data-image-width="1280" data-image-height="913">
+                <div class="d-flex justify-content-center">
+                    <div class="text-center">
+                        <h1 class="mx-auto my-0 text-uppercase">BAYMAX</h1>
+                        <h2 class="text-White-50 mx-auto mt-2 mb-5">A friend, doctor, and bot all rolled into one.</h2>
+                        <a class="btn btn-primary" href="{{ url_for('chat') }}" target="_blank">Talk to Baymax AI</a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- About-->
+        <section class="about-section text-center" id="about">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2 class="text-white mb-4" style="color:white">Our Mission</h2>
+                        <p class="text-white-50" style= "color:white">
+                            Baymax is a doctor and friend all in one. Whether you want to have a chat or need medical advice, Baymax is there for you. For those that don't have access to doctors or when a doctor is simply not available, having a personal healthcare companion like Baymax could be extremely helpful.
+
+                        </p>
+                    </div>
+                </div>
+                <img class="img-fluid" src="{{ url_for('static', filename='img/baymaxcorner.gif')}}" alt="..." />
+            </div>
+        </section>
+        <!-- Projects-->
+        <section class="projects-section" id="projects">
+            <div class="container px-4 px-lg-5">
+                <!-- Featured Project Row-->
+                <div class="row gx-0 mb-4 mb-lg-5 align-items-center justify-content-center">
+                    <div class="col-lg-6"><img class="img-fluid mb-3 mb-lg-0" src="{{ url_for('static', filename='img/gifbaymaxdiscordexample.gif')}}" alt="..." /></div>
+                    <div class="col-lg-4">
+                        <div class="featured-text text-center text-lg-left">
+                            <h4 id="whitefont_transition_h4" style="transition-duration:1s">Discord Bot</h4>
+                            <p class="text-black-50 mb-0" id="whitefont_transition_p" style="transition-duration:1s"> We created a bot on Discord that can be accessed on   
+                          <a href="https://discord.gg/SdyuJymFze"> this page.</a>
+                              This bot does all the things mentioned above. The only addition is that rather than being on a website, it is on Discord.
+                          </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project One Row-->
+                <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
+                  <h2 class="text-white mb-4" id="whitefont_transition_h1" style="transition-duration:1s"><center>Our Team</center></h2>
+                    <div class="col-lg-5"><img class="p-img-fluid" src="{{ url_for('static', filename='img/sooppfp.jpg')}}" alt="..." /></div>
+                    <div class="col-lg-5">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-left">
+                                    <h4 id="whitefont_transition_h4" style="transition-duration:1s">Sophia Huang</h4>
+                                    <p class="mb-0 text-white-50" id="whitefont_transition_p" style="transition-duration:1s">Hi! My name is Sophia. I worked on the generator code and website design along with my team. Have fun.</p>
+                                    <hr class="d-none d-lg-block mb-0 ms-0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Two Row-->
+                <div class="row gx-0 justify-content-center">
+                    <div class="col-lg-5"><img class="p-img-fluid" src="{{ url_for('static', filename='img/abelsprofilepic.png')}}" alt="..." /></div>
+                    <div class="col-lg-5 order-lg-first">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-right">
+                                    <h4 style="padding:10px" id="whitefont_transition_h4" style="transition-duration:1s">Abel Cisneros</h4>
+                                    <p class="mb-0 text-white-50" id="whitefont_transition_p" style="transition-duration:1s">   Yes, I'm the kind of memer who likes to order baguettes from Panera Bread. Bread is good...wait I'm suppose to introduce mysel-</p>
+                                    <p></p>
+                                    <p class="mb-0 text-white-50" id="whitefont_transition_p" style="transition-duration:1s">Hi! I'm a software developer who helps modify styles and information run between Front-end and Back-end structure of the website! With the help of my team and Liz Wang, we would like to introduce to you a friend that doesn't steal your food in a restaurant. :]</p>
+                                    <hr class="d-none d-lg-block mb-0 me-0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project One Row-->
+                <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
+                    <div class="col-lg-5"><img class="p-img-fluid" src="{{ url_for('static', filename='img/newcarsonpfp.jpg')}}" alt="..." /></div>
+                    <div class="col-lg-5">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-left">
+                                    <h4 id="whitefont_transition_h4" style="transition-duration:1s">Carson Mao</h4>
+                                    <p class="mb-0 text-white-50" id="whitefont_transition_p" style="transition-duration:1s">The one guy who just about knows everything. He can't say what that is, because that would ruin the point of being the only person to know. Average New York pizza enjoyer. Also very good at taking photos.</p>
+                                    <hr class="d-none d-lg-block mb-0 ms-0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Two Row-->
+                <div class="row gx-0 justify-content-center">
+                    <div class="col-lg-5"><img class="p-img-fluid" src="{{ url_for('static', filename='img/priyankapfp2.jpg')}}" alt="..." /></div>
+                    <div class="col-lg-5 order-lg-first">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-right">
+                                    <h4 id="whitefont_transition_h4" style="transition-duration:1s">Priyanka Chidambaram</h4>
+                                    <p class="mb-0 text-white-50" id="whitefont_transition_p" style="transition-duration:1s">Hi I'm Priyanka, an incoming senior at the Acton Boxborough Schools. I worked on creating the code for our Baymax model and designing our website with HTML and CSS. I hope you enjoy using him! </p>
+                                    <hr class="d-none d-lg-block mb-0 me-0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project One Row-->
+                <div class="row gx-0 justify-content-center">
+                    <div class="col-lg-5"><img class="p-img-fluid" src="{{ url_for('static', filename='img/anthonypfp.jpg')}}" alt="..." /></div>
+                    <div class="col-lg-5">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-left">
+                                    <h4 id="whitefont_transition_h4" style="transition-duration:1s">Anthony Blaauw</h4>
+                                    <p class="mb-0 text-white-50" id="whitefont_transition_p" style="transition-duration:1s">Hello I am Anthony I am one of the members in the team that created the baymax AI you saw before this. During this project I was a incoming sophomore in high school. 
+                                    <hr class="d-none d-lg-block mb-0 ms-0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Two Row-->
+                <div class="row gx-0 justify-content-center">
+                    <div class="col-lg-5"><img class="p-img-fluid" src="{{ url_for('static', filename='img/newjacobpfp.jpg')}}" alt="..." /></div>
+                    <div class="col-lg-5 order-lg-first">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-right">
+                                    <h4 id="whitefont_transition_h4" style="transition-duration:1s">Jacob Chiu</h4>
+                                    <p class="mb-0 text-white-50" id="whitefont_transition_p" style="transition-duration:1s">Hey I'm Jacob, a rising sophomore. Being a member of the Baymax team was a great experience, and I hope you put the AI to good use!</p>
+                                    <hr class="d-none d-lg-block mb-0 me-0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project One Row-->
+                <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
+                    <div class="col-lg-5"><img class="p-img-fluid" src="{{ url_for('static', filename='img/lizz.JPG')}}" alt="..." /></div>
+                    <div class="col-lg-5">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-left">
+                                    <h4 id="whitefont_transition_h4" style="transition-duration:1s">Liz Wang</h4>
+                                    <p class="mb-0 text-white-50" id="whitefont_transition_p" style="transition-duration:1s">Hey I'm Liz, a rising senior at University of Southern California. I'm the mentor to the Baymax team. Working with the team and seeing the project come to life was truly amazing!</p>
+                                    <hr class="d-none d-lg-block mb-0 ms-0" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!-- Signup-->
+        <section class="signup-section" id="signup">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5">
+                    <div class="col-md-10 col-lg-12 mx-auto text-center">
+                      <i class="fa-solid fa-computer fa-2x mb-2 text-primary"></i>
+                        <h2 class="text-white mb-5" id="whitefont_transition_h2" style="transition-duration:1s">Other Information</h2>
+
+        <!-- Contact-->
+      
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5">
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+                                <h4 class="text-uppercase m-0">Challenges</h4>
+                                <hr class="my-4 mx-auto" />
+                                <div class="small text-black-50" >Time and storage were hurdles that prevented us from developing our model further. </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-database text-primary mb-2"></i>
+                                <h4 class="text-uppercase m-0">Datasets</h4>
+                                <hr class="my-4 mx-auto" />
+                                <div class="small text-black-50">We used the transcript of "<a href="https://blue.ap.teacup.com/qmss/2823.html">Big Hero 6</a>" and a patient-doctor <a href="https://www.kaggle.com/datasets/dsxavier/diagnoise-me/code">dataset</a> from kaggle.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                              <i class="fa-solid fa-circle-nodes text-primary mb-2"></i>
+                                <h4 class="text-uppercase m-0">Model</h4>
+                                <hr class="my-4 mx-auto" />
+                                <div class="small text-black-50">We used a large, tunable neural conversational response generation model called <a href="https://huggingface.co/docs/transformers/model_doc/dialogpt
+">DialoGPT</a> to create our bot.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="footer bg-black small text-center text-white"><div class="container px-4 px-lg-5" id="whitefont_transition_p" style="transition-duration:1s">Copyright &copy; Baymax Inventors 2022</div></footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="{{ url_for('static', filename='js/scripts.js')}}"></script>
+
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
+</html>
